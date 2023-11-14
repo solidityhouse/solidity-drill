@@ -1,66 +1,52 @@
-## Foundry
+# Solidity Drill
+この教材はSolidityの基本的な文法をハンズオン形式で学習することを目的としています
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## 教科書
+`docs/guidance`配下に教科書を配置しています
+数字の順に従って学習を進めてください
 
-Foundry consists of:
+## ソースコード
+### src
+srcディレクトリには実行したいsolidityファイルそのものが格納されています
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+### test
+testディレクトリにはsrcにあるsolidityファイルをテストするスクリプトを書いたファイルが格納されています
 
-## Documentation
+### answer
+answerディレクトリには各チェックポイント毎の模範解答が格納されています
+課題が終わったときまたは詰まったときに見るようにしてください
 
-https://book.getfoundry.sh/
+## テーマ
+この教材ではオンチェーンのコンサートチケット販売プラットフォームをテーマに学習を進めます
 
-## Usage
+# バーチャルコンサートチケット販売システム
 
-### Build
+この教材では、Solidityの基本文法を学びながら、バーチャルコンサートのチケットを販売・管理するためのスマートコントラクトを構築する方法を学びます。
 
-```shell
-$ forge build
-```
+## 学習の目的
 
-### Test
+- **数値型**: チケットの価格や残数を表すために使用します。
+- **配列**: 複数のコンサートを管理するために使用します。
+- **マッピング**: ユーザーと彼らが購入したチケットの関連付けに使用します。
+- **構造体**: コンサートごとの詳細情報を格納するために使用します。
 
-```shell
-$ forge test
-```
+## コンサート構造体
 
-### Format
+コンサートの構造体には以下の情報が含まれます：
 
-```shell
-$ forge fmt
-```
+- `name`: コンサートの名前。
+- `date`: コンサートの開催日。
+- `venue`: コンサートが開催される場所。
+- `price`: チケット一枚あたりの価格。
+- `totalTickets`: 販売するチケットの総数。
+- `remainingTickets`: 未販売のチケット数。
+- `organizer`: コンサートの主催者情報。
 
-### Gas Snapshots
+## 機能
 
-```shell
-$ forge snapshot
-```
+- コンサートの作成
+- チケットの購入
+- チケットの状況確認
+- 売上の計算
 
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+この教材を通じて、生徒は実践的なプロジェクトを作成することでSolidityの基本的なコンセプトを理解し、ブロックチェーン上で動作するアプリケーション開発の入門知識を身につけることができます。
