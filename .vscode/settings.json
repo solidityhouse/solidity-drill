@@ -1,0 +1,4 @@
+{
+    "markdown-pdf.displayHeaderFooter": false,
+    "markdown-pdf.mermaidServer": "https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"
+}

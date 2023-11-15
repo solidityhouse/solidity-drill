@@ -17,3 +17,6 @@ ch01では単純な値の登録・取得を実装しました
 - 教科書のSolidity/AccessControlの理解
 - 教科書のMermaidセクターの理解
 - 教科書のFoundryセクターの理解
+
+---
+前提条件を完了したら[02-design](./02-design.md)に進んでください

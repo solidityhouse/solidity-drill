@@ -1,7 +1,5 @@
 # 実装
-`src/ch02/Platform.sol`に`src/ch01/Platform.sol`をコピーし`forge test --mc PlatformTest02`を実行すると追加したテストが失敗することがわかります
-
-これを解消するように実装を進めます
+03-testで追加したテストのFailを解消するように実装を進めます
 
 すべてのエラーを解消し、テストコマンドの実行結果が
 ```
