@@ -5,16 +5,21 @@ import {Test, console2} from "forge-std/Test.sol";
 import {Platform} from "../../src/ch01/Platform.sol";
 
 contract PlatformTest01 is Test {
+    // テストしたいコントラクトを格納
     Platform public platform;
 
+    // setupはテストごとに呼び出される
     function setUp() public {
+        // テストしたいコントラクトをインスタンス化（デプロイ）して代入
         platform = new Platform();
     }
 
+    // コンサート登録の正常系
     function test_registConcert_success() public {
         _registConcert();
     }
 
+    // コンサート情報取得の正常系
     function test_getConcertInfo_success() public {
         string memory dummyTitle = "dummyTitle";
         uint dummySellingTickets = 1;
@@ -30,6 +35,7 @@ contract PlatformTest01 is Test {
         // assertEq(concert.remainingTickets,dummySellingTickets);
     }
 
+    // チケット購入の正常系
     function test_buyTicket_success() public {
         _registConcert();
 
@@ -38,6 +44,7 @@ contract PlatformTest01 is Test {
         // platform.buyTicket(dummyConcertId);
     }
 
+    // チケット保有確認の正常系
     function test_hasTicket_success() public {
         _registConcert();
 
@@ -50,6 +57,7 @@ contract PlatformTest01 is Test {
         // assertTrue(hasTicket);
     }
 
+    // コンサート登録の汎化処理
     function _registConcert() internal {
         string memory dummyTitle = "dummyTitle";
         uint dummySellingTickets = 10;
